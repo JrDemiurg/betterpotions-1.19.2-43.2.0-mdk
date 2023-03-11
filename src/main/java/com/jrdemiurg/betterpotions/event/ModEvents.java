@@ -36,14 +36,5 @@ public class ModEvents {
                     new ItemStack(Items.EMERALD, 3),
                     stack,16,8,0.02F));
         }
-        if(event.getType() == VillagerProfession.CLERIC) {
-            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-            ItemStack stack = new ItemStack(Items.BLAZE_POWDER, 2);
-            int villagerLevel = 3;
-
-            trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 3),
-                    stack,12,15,0.02F));
-        }
     }
 }

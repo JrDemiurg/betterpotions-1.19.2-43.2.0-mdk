@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.jrdemiurg.betterpotions.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"refmap": "mixins.refmap.json",
+	"client": [
+		"MixinItems"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"minVersion": "0.8.5"
+}

@@ -1,5 +1,7 @@
 package com.jrdemiurg.betterpotions;
 
+import com.jrdemiurg.betterpotions.block.ModBlocks;
+import com.jrdemiurg.betterpotions.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -21,6 +23,9 @@ public class BetterPotions
     public BetterPotions()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
